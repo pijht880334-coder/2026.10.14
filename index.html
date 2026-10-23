@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <!-- 設定網頁字元編碼，完整支援繁體中文。 -->
+  <meta charset="UTF-8">
+  <!-- 設定響應式 viewport，支援電腦、平板與手機直向／橫向。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!-- 設定瀏覽器主題色。 -->
+  <meta name="theme-color" content="#e9edc9">
+  <title>營養知識小測驗</title>
+
+  <!-- 預先連線至 Google Fonts，縮短字型等待時間。 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- 載入指定的繁中字型與英數裝飾字型。 -->
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&family=Playwrite+AR+Guides&display=swap" rel="stylesheet">
+
+  <style>
+    /* 移除瀏覽器預設空白，讓 p5.js 畫布填滿可視範圍。 */
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background: #e9edc9;
+      font-family: "LXGW WenKai TC", "Playwrite AR Guides", sans-serif;
+    }
+
+    /* 防止畫布在觸控裝置上觸發瀏覽器捲動或縮放。 */
+    canvas {
+      display: block;
+      width: 100vw;
+      height: 100vh;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 使用 p5.js 1.11.1 CDN。 -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.11.1/lib/p5.min.js"></script>
+  <!-- 載入主要測驗程式；題庫由 sketch.js 直接向 Google Sheets 取得。 -->
+  <script src="sketch.js"></script>
+</body>
+</html>
